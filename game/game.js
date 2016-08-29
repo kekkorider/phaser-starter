@@ -1,47 +1,24 @@
-var MyGame = {};
+import Phaser from 'phaser';
+import {Preload} from './states/preload';
+import {Menu} from './states/menu';
+// import {Play} from './states/play';
+// import {GameOver} from './states/gameover';
+// import {Victory} from './states/victory';
 
-/*
- * Preload class
- */
-MyGame.Preload = function() {}
+export class Game extends Phaser.Game {
 
-MyGame.Preload.prototype = {
+	constructor() {
+		super(800, 600, Phaser.AUTO, 'game', {create: () => {
 
-	init: function() {
+			this.state.add('preload', Preload);
+			this.state.add('menu', Menu);
+			// this.state.add('play', Play);
+			// this.state.add('gameover', GameOver);
+			// this.state.add('victory', Victory);
 
-	}, 
+			this.state.start('preload');
 
-	preload: function() {
-		this.load.path = 'assets/';
-	}, 
-
-	create: function() {
-		this.state.start('MyGame.Game');
+		}});
 	}
 
 }
-
-/*
- * Game class
- */
-MyGame.Game = function(game) {
-
-	this.property = null;
-
-}
-
-MyGame.Game.prototype = {
-
-	create: function() {
-		console.log('Game initiated');
-	}
-
-}
-
-
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'game', null);
-
-game.state.add('MyGame.Preload', MyGame.Preload);
-game.state.add('MyGame.Game', MyGame.Game);
-
-game.state.start('MyGame.Preload');

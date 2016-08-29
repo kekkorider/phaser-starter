@@ -1,0 +1,36 @@
+{
+  "name": "phaser-starter",
+  "version": "0.0.1",
+  "description": "A simple ES6 starter project for Phaser games",
+  "main": "index.js",
+  "scripts": {
+    "build": "jspm bundle game/main.js game-bundled.js --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kekkorider/phaser-starter.git"
+  },
+  "keywords": [
+    "phaser",
+    "starter",
+    "es6",
+    "es2015"
+  ],
+  "author": "Francesco Michelini <kekkorider@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kekkorider/phaser-starter/issues"
+  },
+  "homepage": "https://github.com/kekkorider/phaser-starter",
+  "devDependencies": {
+    "jspm": "^0.16.45"
+  },
+  "jspm": {
+    "dependencies": {
+      "phaser": "github:photonstorm/phaser@^2.6.2"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}
