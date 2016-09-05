@@ -4,7 +4,8 @@
   "description": "A simple ES6 starter project for Phaser games",
   "main": "index.js",
   "scripts": {
-    "build": "jspm bundle game/main.js game-bundled.js --minify"
+    "build-min": "jspm bundle game/main.js game-bundled.js --minify", 
+    "build": "jspm bundle game/main.js game-bundled.js"
   },
   "repository": {
     "type": "git",

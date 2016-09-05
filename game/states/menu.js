@@ -4,10 +4,23 @@ export class Menu extends Phaser.State {
 
     create() {
 
-        let textStyle = {font: '45px Arial', alight: 'center', stroke: 'white', fill: 'white'};
+        let img = this.add.image(this.world.centerX, this.world.centerY, 'phaser-logo');
+        img.anchor.set(0.5);
+        img.alpha = 0.4;
 
-        let title = this.add.text(this.world.centerX, this.world.centerY, 'Yolo', textStyle);
+        let textStyle = {font: '45px Arial', align: 'center', stroke: 'white', fill: 'white'};
+
+        let title = this.add.text(this.world.centerX, this.world.centerY - 40, 'Phaser ES6 Starter', textStyle);
         title.anchor.set(0.5);
+
+        let subtitle = this.add.text(this.world.centerX, this.world.centerY + 30, 'Press Z to start', textStyle);
+        subtitle.anchor.set(0.5);
+        subtitle.fontSize = 25;
+
+        let startBtn = this.input.keyboard.addKey(Phaser.Keyboard.Z);
+        startBtn.onDown.add(function() {
+            this.state.start('play');
+        }, this);
 
     }
 

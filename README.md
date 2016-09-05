@@ -16,10 +16,6 @@ npm run build
 ```
 
 # TO-DO
-* Create a basic game state
-* Create a basic victory state
-* Create a basic gameover state
 * Create an example character module
-* Improve a bit the menu state
 
 Et voilà, you're ready to code your game :)
