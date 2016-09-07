@@ -15,9 +15,7 @@ export class GameOver extends Phaser.State {
 
         let btn  = this.input.keyboard.addKey(Phaser.Keyboard.Z);
 
-        btn.onDown.add(function() {
-            this.state.start('menu');
-        }, this);
+        btn.onDown.add( () => this.state.start('menu') );
 
     }
 

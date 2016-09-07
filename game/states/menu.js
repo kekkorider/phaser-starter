@@ -4,7 +4,7 @@ export class Menu extends Phaser.State {
 
     create() {
 
-        let img = this.add.image(this.world.centerX, this.world.centerY, 'phaser-logo');
+        let img = this.add.image(this.world.centerX, this.world.centerY, 'phaser');
         img.anchor.set(0.5);
         img.alpha = 0.4;
 
@@ -18,9 +18,7 @@ export class Menu extends Phaser.State {
         subtitle.fontSize = 25;
 
         let startBtn = this.input.keyboard.addKey(Phaser.Keyboard.Z);
-        startBtn.onDown.add(function() {
-            this.state.start('play');
-        }, this);
+        startBtn.onDown.addOnce( () => this.state.start('play') );
 
     }
 

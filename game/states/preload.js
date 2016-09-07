@@ -4,15 +4,11 @@ export class Preload extends Phaser.State {
 
     preload() {
 
-        let textStyle = {
-            font: '45px Arial', 
-            align: 'center', 
-            stroke: 'white'
-        }
-
         this.load.path = 'assets/';
 
-        this.load.image('phaser-logo', 'phaser.png');
+        this.load.images(['phaser']);
+
+        this.load.spritesheet('wizard', 'wizard.png', 95, 123, 6);
 
     }
 
