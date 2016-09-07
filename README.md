@@ -18,8 +18,9 @@ OR
 ```
 npm run build-min
 ```
+to create a minified game file.
 
 # TO-DO
-* Create an example character module
+* Nothing for now :)
 
 Et voilà, you're ready to code your game :)
