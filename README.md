@@ -14,6 +14,10 @@ npm install && jspm install phaser
 ```
 npm run build
 ```
+OR
+```
+npm run build-min
+```
 
 # TO-DO
 * Create an example character module
