@@ -1,19 +1,15 @@
-import Phaser from 'phaser';
+MyGame.Preload.prototype = {
 
-export class Preload extends Phaser.State {
+	init: function() {
 
-    preload() {
+	}, 
 
-        this.load.path = 'assets/';
+	preload: function() {
+		this.load.path = 'assets/';
+	}, 
 
-        this.load.images(['phaser']);
-
-        this.load.spritesheet('wizard', 'wizard.png', 95, 123, 6);
-
-    }
-
-    create() {
-        this.state.start('menu');
-    }
+	create: function() {
+		this.state.start('MyGame.Game');
+	}
 
 }

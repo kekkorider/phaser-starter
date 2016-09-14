@@ -5,7 +5,7 @@ MyGame.Game = function(game) {
 
 	this.property = null;
 
-};
+}
 
 MyGame.Game.prototype = {
 
@@ -13,4 +13,4 @@ MyGame.Game.prototype = {
 		console.log('Game initiated');
 	}
 
-};
+}
