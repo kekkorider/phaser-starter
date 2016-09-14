@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 bower_components/
 node_modules/
 build/
+=======
+jspm_packages/
+node_modules/
+>>>>>>> 676219a511f93a3d808d4bd15879301a696a91dd
