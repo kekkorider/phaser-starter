@@ -1,0 +1,36 @@
+{
+  "name": "phaser-starter",
+  "version": "1.0.0",
+  "description": "This is a basic project for the Phaser framework. \r It simply has the basic code to run your games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kekkorider/phaser-starter.git"
+  },
+  "keywords": [
+    "phaser",
+    "starter",
+    "es5"
+  ],
+  "author": "Francesco Michelini <kekkorider@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kekkorider/phaser-starter/issues"
+  },
+  "homepage": "https://github.com/kekkorider/phaser-starter",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "pump": "^1.0.1"
+  }
+}
