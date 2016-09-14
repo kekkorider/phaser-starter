@@ -1,3 +1,8 @@
+/*
+ * Preload class
+ */
+MyGame.Preload = function() {};
+
 MyGame.Preload.prototype = {
 
 	init: function() {
@@ -9,7 +14,8 @@ MyGame.Preload.prototype = {
 	}, 
 
 	create: function() {
+		console.log('Preloaded everything. going to Game state');
 		this.state.start('MyGame.Game');
 	}
 
-}
+};
