@@ -11,6 +11,7 @@ var PATHS = {
     js: [
         'game/states/Boot.js', 
         'game/states/Preload.js', 
+        'game/states/MainMenu.js', 
         'game/states/Game.js', 
         'game/Main.js'
     ], 
@@ -21,7 +22,7 @@ var PATHS = {
 
 gulp.task('default', ['watch']);
 
-gulp.task('build', ['clean', 'libs', 'jshint'], function(cb) {
+gulp.task('build', ['libs', 'jshint'], function(cb) {
 
     pump([
         gulp.src(PATHS.js), 
