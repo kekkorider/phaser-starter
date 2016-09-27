@@ -13,7 +13,7 @@ MyGame.Boot.prototype = {
 	}, 
 
 	create: function() {
-        console.log('Boot state. going to Preload state');
+        console.log('Boot state');
 		game.state.start('MyGame.Preload');
 	}
 

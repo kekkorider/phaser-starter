@@ -1,3 +1,8 @@
 bower_components/
 node_modules/
 build/
+game/libs/
+game/bundle.js
+game/bundle.js.map
+game/bundle.min.js
+game/bundle.min.js.map

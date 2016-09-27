@@ -17,19 +17,26 @@ var PATHS = {
     ], 
     libs: [
         'bower_components/phaser/build/phaser.min.js'
+    ], 
+    html: [
+        'index.html'
+    ], 
+    assets: [
+        'assets/*.*'
     ]
 }
 
 gulp.task('default', ['watch']);
 
-gulp.task('build', ['libs', 'jshint'], function(cb) {
+gulp.task('build', ['html', 'assets', 'libs', 'jshint'], function(cb) {
 
     pump([
         gulp.src(PATHS.js), 
         sourcemaps.init(), 
         concat('bundle.js'), 
         sourcemaps.write('/'), 
-        gulp.dest('build')
+        gulp.dest('build/game'), // build folder
+        gulp.dest('game') // dev folder
     ]);
 
     pump([
@@ -38,7 +45,8 @@ gulp.task('build', ['libs', 'jshint'], function(cb) {
         concat('bundle.min.js'), 
         uglify(), 
         sourcemaps.write('/'), 
-        gulp.dest('build')
+        gulp.dest('build/game'), // build folder
+        gulp.dest('game') // dev folder
     ], cb);
 
 });
@@ -51,7 +59,18 @@ gulp.task('jshint', function() {
 
 gulp.task('libs', function() {
     gulp.src(PATHS.libs)
-        .pipe(gulp.dest('build/libs'));
+        .pipe(gulp.dest('build/game/libs')) // build folder
+        .pipe(gulp.dest('game/libs')); // dev folder
+});
+
+gulp.task('html', function() {
+    gulp.src(PATHS.html)
+        .pipe(gulp.dest('build'));
+});
+
+gulp.task('assets', function() {
+    gulp.src(PATHS.assets)
+        .pipe(gulp.dest('build/assets'));
 });
 
 gulp.task('clean', function() {
