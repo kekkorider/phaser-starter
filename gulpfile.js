@@ -35,7 +35,7 @@ gulp.task('build', ['html', 'assets', 'libs', 'jshint'], function(cb) {
         sourcemaps.init(), 
         concat('bundle.js'), 
         sourcemaps.write('/'), 
-        gulp.dest('build/game'), // build folder
+        gulp.dest('dist/www/game'), // build folder
         gulp.dest('game') // dev folder
     ]);
 
@@ -45,7 +45,7 @@ gulp.task('build', ['html', 'assets', 'libs', 'jshint'], function(cb) {
         concat('bundle.min.js'), 
         uglify(), 
         sourcemaps.write('/'), 
-        gulp.dest('build/game'), // build folder
+        gulp.dest('dist/www/game'), // build folder
         gulp.dest('game') // dev folder
     ], cb);
 
@@ -59,18 +59,18 @@ gulp.task('jshint', function() {
 
 gulp.task('libs', function() {
     gulp.src(PATHS.libs)
-        .pipe(gulp.dest('build/game/libs')) // build folder
+        .pipe(gulp.dest('dist/www/game/libs')) // build folder
         .pipe(gulp.dest('game/libs')); // dev folder
 });
 
 gulp.task('html', function() {
     gulp.src(PATHS.html)
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('dist/www'));
 });
 
 gulp.task('assets', function() {
     gulp.src(PATHS.assets)
-        .pipe(gulp.dest('build/assets'));
+        .pipe(gulp.dest('dist/www/assets'));
 });
 
 gulp.task('clean', function() {

@@ -1,6 +1,6 @@
 bower_components/
 node_modules/
-build/
+dist/
 game/libs/
 game/bundle.js
 game/bundle.js.map
