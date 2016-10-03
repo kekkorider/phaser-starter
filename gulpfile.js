@@ -4,8 +4,7 @@ var gulp       = require('gulp'),
     concat     = require('gulp-concat'), 
     sourcemaps = require('gulp-sourcemaps'),
     pump       = require('pump'),
-    jshint     = require('gulp-jshint'),
-    del        = require('del');
+    jshint     = require('gulp-jshint');
 
 var PATHS = {
     js: [
@@ -17,26 +16,30 @@ var PATHS = {
     ], 
     libs: [
         'bower_components/phaser/build/phaser.min.js'
-    ], 
-    html: [
-        'index.html'
-    ], 
-    assets: [
-        'assets/*.*'
     ]
 }
 
 gulp.task('default', ['watch']);
 
-gulp.task('build', ['html', 'assets', 'libs', 'jshint'], function(cb) {
+gulp.task('build', ['libs', 'jshint'], function(cb) {
+
+    pump([
+        gulp.src('index.html'), 
+        gulp.dest('build/www')
+    ]);
+
+    pump([
+        gulp.src('assets/*.*'), 
+        gulp.dest('build/www/assets')
+    ]);
 
     pump([
         gulp.src(PATHS.js), 
         sourcemaps.init(), 
         concat('bundle.js'), 
         sourcemaps.write('/'), 
-        gulp.dest('dist/www/game'), // build folder
-        gulp.dest('game') // dev folder
+        gulp.dest('build/www/game'), 
+        gulp.dest('game')
     ]);
 
     pump([
@@ -45,8 +48,8 @@ gulp.task('build', ['html', 'assets', 'libs', 'jshint'], function(cb) {
         concat('bundle.min.js'), 
         uglify(), 
         sourcemaps.write('/'), 
-        gulp.dest('dist/www/game'), // build folder
-        gulp.dest('game') // dev folder
+        gulp.dest('build/www/game'), 
+        gulp.dest('game')
     ], cb);
 
 });
@@ -59,24 +62,8 @@ gulp.task('jshint', function() {
 
 gulp.task('libs', function() {
     gulp.src(PATHS.libs)
-        .pipe(gulp.dest('dist/www/game/libs')) // build folder
-        .pipe(gulp.dest('game/libs')); // dev folder
-});
-
-gulp.task('html', function() {
-    gulp.src(PATHS.html)
-        .pipe(gulp.dest('dist/www'));
-});
-
-gulp.task('assets', function() {
-    gulp.src(PATHS.assets)
-        .pipe(gulp.dest('dist/www/assets'));
-});
-
-gulp.task('clean', function() {
-    return del([
-        'build'
-    ]);
+        .pipe(gulp.dest('build/www/game/libs'))
+        .pipe(gulp.dest('game/libs'));
 });
 
 gulp.task('watch', function() {
