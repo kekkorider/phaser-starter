@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/kekkorider/phaser-starter.git"
+    "url": "https://github.com/kekkorider/phaser-starter.git",
+    "type": "git"
   },
   "keywords": [
     "phaser",
