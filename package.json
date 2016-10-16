@@ -28,8 +28,10 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.9",
+    "gulp-webserver": "^0.9.1",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
+    "phaser": "^2.6.2",
     "pump": "^1.0.1"
   }
 }

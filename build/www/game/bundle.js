@@ -137,5 +137,3 @@ game.state.add('MyGame.MainMenu', MyGame.MainMenu);
 game.state.add('MyGame.Game', MyGame.Game);
 
 game.state.start('MyGame.Boot');
-
-//# sourceMappingURL=bundle.js.map
