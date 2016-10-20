@@ -40,8 +40,7 @@ gulp.task('build', ['libs', 'jshint'], function(cb) {
     pump([
         gulp.src(PATHS.js), 
         concat('bundle.js'), 
-        gulp.dest('build/www/game'), 
-        gulp.dest('game')
+        gulp.dest('build/www/game')
     ]);
 
     pump([
@@ -50,22 +49,24 @@ gulp.task('build', ['libs', 'jshint'], function(cb) {
         concat('bundle.min.js'), 
         uglify(), 
         sourcemaps.write('/'), 
-        gulp.dest('build/www/game'), 
-        gulp.dest('game')
+        gulp.dest('build/www/game')
     ], cb);
 
 });
 
 gulp.task('jshint', function() {
-    return gulp.src(PATHS.js)
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'));
+    return pump([
+        gulp.src(PATHS.js), 
+        jshint(), 
+        jshint.reporter('jshint-stylish')
+    ]);
 });
 
 gulp.task('libs', function() {
-    gulp.src(PATHS.libs)
-        .pipe(gulp.dest('build/www/game/libs'))
-        .pipe(gulp.dest('game/libs'));
+    pump([
+        gulp.src(PATHS.libs), 
+        gulp.dest('build/www/game/libs')
+    ]);    
 });
 
 gulp.task('webserver', ['build'], function() {

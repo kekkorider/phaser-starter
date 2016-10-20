@@ -1,6 +1,2 @@
-node_modules/
 build/
-game/libs/
-game/bundle.js
-game/bundle.min.js
-game/bundle.min.js.map
+node_modules/

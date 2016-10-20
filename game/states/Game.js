@@ -12,6 +12,7 @@ MyGame.Game = function(game) {
 	this.text_style = {
         font: 'normal 23px Arial', 
         fill: '#fff', 
+		align: 'center'
 	};
 
 };
@@ -22,7 +23,7 @@ MyGame.Game.prototype = {
 
 		console.log('Game state');
 
-        this.text = this.add.text(this.world.centerX, this.world.centerY, 'Press Z or tap to go to MainMenu state', this.text_style);
+        this.text = this.add.text(this.world.centerX, this.world.centerY, 'Press Z or tap\nto go to MainMenu state', this.text_style);
         this.text.anchor.setTo(0.5);
 
 		// Back to MainMenu
