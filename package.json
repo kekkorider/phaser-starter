@@ -1,21 +1,19 @@
 {
   "name": "phaser-starter",
-  "version": "0.0.1",
-  "description": "A simple ES6 starter project for Phaser games",
+  "version": "1.0.0",
+  "description": "This is a basic project for the Phaser framework. \r It simply has the basic code to run your games.",
   "main": "index.js",
   "scripts": {
-    "build-min": "jspm bundle game/main.js game-bundled.js --minify", 
-    "build": "jspm bundle game/main.js game-bundled.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/kekkorider/phaser-starter.git"
+    "url": "https://github.com/kekkorider/phaser-starter.git",
+    "type": "git"
   },
   "keywords": [
     "phaser",
     "starter",
-    "es6",
-    "es2015"
+    "es5"
   ],
   "author": "Francesco Michelini <kekkorider@gmail.com>",
   "license": "ISC",
@@ -24,14 +22,16 @@
   },
   "homepage": "https://github.com/kekkorider/phaser-starter",
   "devDependencies": {
-    "jspm": "^0.16.45"
-  },
-  "jspm": {
-    "dependencies": {
-      "phaser": "github:photonstorm/phaser@^2.6.2"
-    },
-    "devDependencies": {
-      "typescript": "npm:typescript@^1.6.2"
-    }
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1",
+    "phaser": "^2.6.2",
+    "pump": "^1.0.1"
   }
 }

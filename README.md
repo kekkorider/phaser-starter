@@ -1,24 +1,25 @@
 # phaser-starter
 
-This is a basic project written in ES6 for the Phaser framework. 
-It has the basic code to run your games. Thanks [The Coding Couple](http://www.thecodingcouple.com/getting-started-phaser-es2015/) for the basic code.
+This is a basic project written in ES5 for the Phaser framework. 
+It has the basic code to run your games.
 
 # How to setup
-In order to use this template you must have **npm** and **jspm** installed globally into your local machine.
+In order to use this template you must have **npm**, **gulp** and **bower** installed globally into your local machine.
 Then you just need to run this command:
 ```
-npm install && jspm install phaser
+npm install && bower install
 ```
 
-# How to build your project
+# Build your project
+When developing your game you just have to run
 ```
-npm run build
+gulp
 ```
-OR
+in order to make **gulp** "watch" the changes you make to your JavaScript files and automatically compile it, but if you want to make a manual build you have to run
 ```
-npm run build-min
+gulp build
 ```
-to create a minified game file.
+
 
 # TO-DO
 * Nothing for now :)

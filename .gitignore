@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+build/
+node_modules/
+=======
 jspm_packages/
 node_modules/
 bower_components/
 build/
+>>>>>>> master
