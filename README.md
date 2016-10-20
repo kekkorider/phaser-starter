@@ -4,10 +4,10 @@ This is a basic project written in ES5 for the Phaser framework.
 It has the basic code to run your games.
 
 # How to setup
-In order to use this template you must have **npm**, **gulp** and **bower** installed globally into your local machine.
+In order to use this template you must have **npm**, **gulp** and **yarn** installed globally into your local machine.
 Then you just need to run this command:
 ```
-npm install && bower install
+yarn install
 ```
 
 # Build your project
